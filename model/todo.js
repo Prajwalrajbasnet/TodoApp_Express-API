@@ -1,8 +1,8 @@
 class Todo{
-  constructor(task, completed, deadline){
-    this.task = task;
-    this.completed = completed;
-    this.deadline = deadline;
+  constructor(rawTodo){
+    this.task = rawTodo.task;
+    this.completed = rawTodo.completed;
+    this.deadline = rawTodo.deadline;
   }
 }
 module.exports = Todo;
