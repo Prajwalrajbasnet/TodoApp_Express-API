@@ -7,6 +7,7 @@ router.route('/todos')
 
 router.route('/todo/:id')
   .get(todoController.getTodo)
+  .post(todoController.addTodo)
   .put(todoController.modifyTodo)
   .delete(todoController.removeTodo)
 
