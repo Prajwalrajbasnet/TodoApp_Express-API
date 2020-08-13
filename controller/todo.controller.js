@@ -47,7 +47,7 @@ const getTodos = (req, res) => {
 }
 
 const modifyTodo =  (req, res) => {
-  todoModel.updateTodo(req.params.id, (err, output) => {
+  todoModel.updateTodo(req.params.id, req.body, (err, output) => {
     if(err){
       res.send(err);
     }
