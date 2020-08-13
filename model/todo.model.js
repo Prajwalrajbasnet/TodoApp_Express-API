@@ -37,7 +37,7 @@ class Todos {
   }
 
   static updateTodo = (id, todo, result) => {
-    con.query('UPDATE TABLE todos SET task= ? completed= ? deadline= ? WHERE id= ? ', [todo.task, todo.completed, todo.deadline, id], (err, output) => {
+    con.query('UPDATE todos SET task= ?, completed= ?, deadline= ? WHERE id= ? ', [todo.task, todo.completed, todo.deadline, id], (err, output) => {
       if(err){
         result(err, null);
       }
