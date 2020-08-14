@@ -2,7 +2,7 @@ const bodyParser = require('body-parser');
 
 const express = require('express'),
   app = express(),
-  config = require('./config'),
+  config = require('./config/app.config'),
   apiRoutes = require('./routes/app.routes');
 
 app.use(bodyParser.urlencoded({extended: true}));
