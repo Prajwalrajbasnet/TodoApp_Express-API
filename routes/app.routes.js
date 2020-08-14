@@ -2,7 +2,7 @@ const router = require('express').Router(),
   todoController = require('../controller/todo.controller'),
   authRouter = require('./auth.routes');
 
-  router.all('/auth', authRouter);
+  router.use('/auth', authRouter);
 
   router.route('/todos')
   .get(todoController.getTodos)

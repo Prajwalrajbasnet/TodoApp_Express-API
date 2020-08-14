@@ -10,12 +10,13 @@ class Users{
     })
   }
   
-  static getUser = (user, result) => {
-    con.query('SELECT * FROM users WHERE username ?', user.username, (err, output) => {
+  static getUser = (username, result) => {
+    con.query('SELECT * FROM users WHERE username = ?', username, (err, output) => {
       if(err){
         result(err, null);
       }
       result(null, output);
-    } )
+    })
   }
 }
+module.exports = Users;

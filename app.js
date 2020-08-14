@@ -24,6 +24,14 @@ app.use((req, res, next) => {
   })
 })
 
+//error handling middleware
+app.use((err, req, res, next) => {
+  res.status(400).json({
+    message: err.message || err,
+    status: err.status || 400,
+  })
+})
+
 app.listen(config.port, () => {
   console.log('Listening in port ', config.port);
 })
